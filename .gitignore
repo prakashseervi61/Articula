@@ -2,6 +2,7 @@
 models/
 data/
 data_docs/
+projects/
 
 # Environments & caches
 .venv/
