@@ -1,0 +1,20 @@
+# Nexora Knee AI - 6hr hackathon prototype (CPU-only)
+# Install: pip install -r requirements.txt
+#
+# NOTE: tensorflow-cpu 2.15.x needs Python 3.9-3.11 and numpy<2.
+#       If you are on Python 3.12+, use tensorflow-cpu==2.16.2 AND add:
+#           tf-keras==2.16.0
+#       (legacy .hdf5 models load through tf-keras on newer versions)
+
+streamlit>=1.36
+pandas>=2.0
+numpy<2
+plotly>=5.20
+pillow>=10.0
+matplotlib>=3.8
+gdown>=5.0
+fpdf2>=0.7          # generates the PS-solution PDF deliverable
+
+# --- pick ONE line based on your Python version ---
+tensorflow-cpu==2.15.1      # Python 3.9 - 3.11 (recommended)
+# tensorflow-cpu==2.16.2    # Python 3.12+  (also add tf-keras==2.16.0)
