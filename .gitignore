@@ -1,0 +1,13 @@
+# Heavy assets (per user request)
+models/
+data/
+data_docs/
+
+# Environments & caches
+.venv/
+__pycache__/
+*.pyc
+
+# Logs & tooling artifacts
+*.log
+.playwright-mcp/
