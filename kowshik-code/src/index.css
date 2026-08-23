@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@layer base {
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Medical & Clinical UI Utilities */
+.clinical-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease-in-out;
+}
+
+.clinical-card-hover:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08);
+}
+
+.clinical-glow-blue {
+  box-shadow: 0 0 15px -3px rgba(2, 132, 199, 0.25);
+}
+
+.clinical-glow-teal {
+  box-shadow: 0 0 15px -3px rgba(13, 148, 136, 0.25);
+}
+
+/* DICOM Canvas Scanning Shimmer */
+@keyframes scan-line {
+  0% { transform: translateY(0%); opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { transform: translateY(100%); opacity: 0.8; }
+}
+
+.animate-scan-line {
+  animation: scan-line 2.5s ease-in-out infinite alternate;
+}
+
+/* Printable Clinical Report Styles */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break-after {
+    page-break-after: always;
+  }
+  .clinical-card {
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+}
